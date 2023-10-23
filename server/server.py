@@ -32,14 +32,3 @@ class Player:
                 best_points = max(best_points, (count - 3) * i)
         self.points = best_points
         return best_points
-
-
-class Play:
-    def __init__(self, players_names):
-        self.players = [Player(name) for name in players_names]
-
-    def get_results(self):
-        answer = []
-        for player in self.players:
-            answer.append(player.points)
-
