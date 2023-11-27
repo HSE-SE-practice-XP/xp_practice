@@ -4,10 +4,16 @@ import numpy as np
 
 
 class Player:
-    def __init__(self, name):
+    def __init__(self):
         self.points = 0
-        self.name = name
+        self.name = ""
         self.numbers = [0 for _ in range(5)]
+
+    def get_name(self):
+        return self.name
+
+    def set_name(self, name):
+        self.name = name
 
     def throw_dices(self):
         for i in range(5):
