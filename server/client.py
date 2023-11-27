@@ -42,6 +42,9 @@ cube_rect_const.topleft = (800, 200)
 
 none_throw_cubes = np.array([2, 4])
 
+
+points = 25
+
 def print_all_cub():
 
     for index, rect in enumerate(cube_rects):
@@ -64,6 +67,10 @@ def print_all_cub():
             screen.blit(cube_image_6, rect.move(200 * index, 0))
 
     screen.blit(throw_image, cube_rect_throw.move(500, 300))
+
+    font = pygame.font.SysFont("Verdana", 50)
+    text = font.render(f"Ваши очки: 25", True, "white")
+    screen.blit(text, (100, 500))
 
     # Обновление экрана
     pygame.display.flip()
